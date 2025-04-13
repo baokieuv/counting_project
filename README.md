@@ -9,12 +9,12 @@
 ### Step 1: Clone the project
 Use the following command to clone the project from GitHub to your local machine:
   ```bash
-  git clone https://github.com/luanquangminh/Microservices.git
+  git clone https://github.com/baokieuv/count-fasteners.git
   ```
 ### Step 2: Install library
 Use the following command to clone the project from GitHub to your local machine:
   ```bash
-  pip install requirements.txt
+  pip install -r requirements.txt
   ```
 ### Step 3: Change model path
 Navigate to ```/src/detect``` and change the model path and image path to your path in model.py
