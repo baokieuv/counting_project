@@ -9,9 +9,3 @@ numpy
 
 # ONNX Runtime - Chạy mô hình đã convert sang định dạng ONNX
 onnxruntime
-
-# mean_average_precision - Tính mAP cho đánh giá mô hình
-mean_average_precision
-
-# matplotlib - Vẽ biểu đồ
-matplotlib
