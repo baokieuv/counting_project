@@ -17,15 +17,14 @@ Use the following command to clone the project from GitHub to your local machine
   pip install -r requirements.txt
   ```
 ### Step 3: Change model path
-Navigate to ```/src/detect``` and change the model path and image path to your path in model.py
+Navigate to ```/src/detect``` and change the model path to your path in model.py
   ```py
   model_path = "D:/code/projectTest/computer_vision/project2/best.onnx"
-  image_path = "D:/code/projectTest/computer_vision/project2/dataset/images/03-1-1_jpg.rf.c7f4301e375532a4674b5381896c30b6.jpg"
   ```
 ### Step 4: Run the application
 After installing the requirements and change the path, run the application with the following command:
   ```bash
-  python model.py
+  python model.py --input "image path" --type "loại object"
   ```
 And see the result:
 ![image](https://github.com/user-attachments/assets/84dafc5a-cedd-4974-82b2-a8c41aeee4d4)
