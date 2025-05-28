@@ -1,36 +1,50 @@
-# Counting fasteners project
+# 🧠 Counting Fasteners – YOLOv11 Model
 
-## General Information
-- Project sử dụng YOLOv11 để tran mô hình nhận diện vật thể (long đen, bu lông,..)
-- Sử dụng ONNX runtime để triển khai nhận diện do có ưu thế về tốc độ tính toán
+## 🗂️ Thông tin chung
 
-## More details
+Phần này là module **model** của dự án đếm phụ kiện công nghiệp (bu lông, ốc vít, long đen, v.v.) sử dụng **YOLOv11**.
 
-### Step 1: Clone the project
-Use the following command to clone the project from GitHub to your local machine:
-  ```bash
-  git clone https://github.com/baokieuv/count-fasteners.git
-  ```
-### Step 2: Install library
-Use the following command to clone the project from GitHub to your local machine:
-  ```bash
-  pip install -r requirements.txt
-  ```
-### Step 3: Change model path
-Navigate to ```/src/detect``` and change the model path to your path in model.py
-  ```py
-  model_path = "D:/code/projectTest/computer_vision/project2/best.onnx"
-  ```
-### Step 4: Run the application
-After installing the requirements and change the path, run the application with the following command:
-  ```bash
-  python model.py --input "image path" --type "loại object"
-  ```
-And see the result:
-![image](https://github.com/user-attachments/assets/84dafc5a-cedd-4974-82b2-a8c41aeee4d4)
+- Mô hình được huấn luyện trên Google Colab.
+- Sau khi huấn luyện, mô hình được chuyển sang định dạng **ONNX** để tăng tốc suy luận nhờ **ONNX Runtime**.
+- Code phát hiện (detect) chạy cục bộ, sử dụng mô hình đã huấn luyện.
 
-## Main features
+---
+
+## 🔧 Cấu trúc module model
+```
+model/
+├── train/ # Code huấn luyện mô hình (YOLOv11 - Colab)
+│ ├── project2.ipynb # Notebook huấn luyện trên Google Colab
+├── detect/ # Sử dụng mô hình đã huấn luyện để phát hiện
+│ ├── model.py # Mã nguồn phát hiện dùng ONNX
+├── requirements.txt
+├── best.onnx
+└── README.md
+```
 
 
+---
 
+## 🚀 Hướng dẫn sử dụng
 
+### 📦 Bước 1: Cài đặt thư viện
+
+```bash
+cd model/detect
+pip install -r requirements.txt
+```
+### ▶️ Bước 2: Chạy mô hình
+
+```
+python model.py --input "duong_dan_anh.jpg" --type "loai_phu_kien"
+```
+### 📸 Kết quả
+
+Ảnh sau xử lý sẽ hiển thị kết quả nhận diện:
+
+![washer_20250528_224427](https://github.com/user-attachments/assets/b512d8e8-c225-4db2-b34c-8c3717b6c3f2)
+
+## ✨ Tính năng chính
+- Nhận diện chính xác các loại phụ kiện công nghiệp phổ biến.
+- Sử dụng mô hình nhẹ và nhanh nhờ ONNX Runtime.
+- Dễ dàng triển khai trong hệ thống có giao diện web hoặc camera.
