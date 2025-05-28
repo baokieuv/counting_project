@@ -44,6 +44,16 @@ python model.py --input "duong_dan_anh.jpg" --type "loai_phu_kien"
 
 ![washer_20250528_224427](https://github.com/user-attachments/assets/b512d8e8-c225-4db2-b34c-8c3717b6c3f2)
 
+## Đánh giá mô hình
+
+Confusion matrix:
+
+![confusion_matrix](https://github.com/user-attachments/assets/7c051f0b-9ba1-41c6-b777-33cbf003828d)
+
+Biểu đồ đánh giá:
+![results](https://github.com/user-attachments/assets/c2fa11a0-f96c-480c-bc68-8f31ff7f9595)
+
+
 ## ✨ Tính năng chính
 - Nhận diện chính xác các loại phụ kiện công nghiệp phổ biến.
 - Sử dụng mô hình nhẹ và nhanh nhờ ONNX Runtime.
